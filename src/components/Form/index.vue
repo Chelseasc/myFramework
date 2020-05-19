@@ -21,6 +21,8 @@
 import ScForm from './Form';
 import ScFormItem from './FormItem';
 import ScInput from './Input';
+import Create from '@/utils/create';
+import Notice from '@/components/Notice/notice';
 export default {
   components: {
     ScForm,
@@ -44,11 +46,17 @@ export default {
   methods: {
     submitForm(form) {
       this.$refs[form].handleValidate(valid => {
-        if(valid) {
-          alert('请求登录');
-        } else {
-          alert('校验失败');
-        }
+        // if(valid) {
+        //   alert('请求登录');
+        // } else {
+        //   alert('校验失败');
+        // }
+        const notice = Create(Notice, {
+          title: 'scscsc',
+          message: valid ? '请求登录' : '校验失败',
+          dutation: 30000
+        })
+        notice.show();
       })
     }
   }

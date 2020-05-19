@@ -21,8 +21,7 @@
 import ScForm from './Form';
 import ScFormItem from './FormItem';
 import ScInput from './Input';
-import Create from '@/utils/create';
-import Notice from '@/components/Notice/notice';
+import Notice from '@/components/Notice/Notice';
 export default {
   components: {
     ScForm,
@@ -51,7 +50,7 @@ export default {
         // } else {
         //   alert('校验失败');
         // }
-        const notice = Create(Notice, {
+        const notice = this.$Create(Notice, {
           title: 'scscsc',
           message: valid ? '请求登录' : '校验失败',
           dutation: 30000

@@ -28,11 +28,7 @@ export default {
     },
     methods: {
         show() {
-            console.log(111);
-            
-            this.isShow = true  ;
-            console.log(this.isShow);
-            
+            this.isShow = true;
             setTimeout(this.hide, this.duration);
         },
         hide() {
@@ -52,7 +48,7 @@ export default {
         margin: 0 auto;
         position: absolute;
         top: 100px;
-        left: 50%;
+        left: 40%;
         color: #1a1a1a; 
         text-align: center;
     }
